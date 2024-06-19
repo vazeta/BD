@@ -1,0 +1,557 @@
+{
+	"info": {
+		"_postman_id": "968ccc11-40d2-496d-a521-7034d6722b0e",
+		"name": "Proj",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34926309"
+	},
+	"item": [
+		{
+			"name": "Registar paciente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Diogo saldanha\",\r\n    \"username\": \"saldini\",\r\n    \"email\": \"saldini@gmail.com\",\r\n    \"password\": \"securepassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/dbproj/register/patient",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"register",
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register doctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Dr. Manuel Batista\",\r\n    \"username\": \"mbatista\",\r\n    \"email\": \"mbatista@example.com\",\r\n    \"password\": \"securepassword\",\r\n    \"contract_details\": \"Contratado em regime full time.... no dia 22/7/12\",\r\n    \"specialization\": \"Cardiology\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/dbproj/register/doctor",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"register",
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8080/register/nurse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Bob Green2\",\r\n    \"username\": \"nurse2\",\r\n    \"email\": \"nurse2@example.com\",\r\n    \"password\": \"securepassword\",\r\n    \"contract_details\": \"Nurse contract details2\",\r\n    \"hierarchy\": \"Nurse hierarchy level\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/dbproj/register/nurse",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"register",
+						"nurse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registar assistente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ana Mendes\",\r\n    \"username\": \"mendes\",\r\n    \"email\": \"mendes@example.com\",\r\n    \"password\": \"securepassword\",\r\n    \"contract_details\": \"Assistant contract details\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/dbproj/register/assistant",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"register",
+						"assistant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"mendes\",\r\n    \"password\": \"securepassword\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/dbproj/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "marcar uma consulta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctor_id\": 11,\r\n    \"timestamp\": \"2045-1-31T22:59:00\",\r\n    \"token\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZhemV0YSIsImV4cCI6MTcxNjk5Njc0NX0.OqOSQY8FXa5ghjmKB9vfIcnfoEhV2dAw5t3aqD_ceXk\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/appointment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar consultas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZhemV0YSIsImV4cCI6MTcxNjk5Njc0NX0.OqOSQY8FXa5ghjmKB9vfIcnfoEhV2dAw5t3aqD_ceXk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/appointments/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"appointments",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registar nurses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Maria joao\",\r\n    \"username\": \"mjoao\",\r\n    \"email\": \"mjoao@example.com\",\r\n    \"password\": \"securepassword\",\r\n    \"contract_details\": \"Contratada no dia 5/7/21 em regime full-time...\",\r\n    \"hierarchy\": \"Junior\"\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/dbproj/register/nurse",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"dbproj",
+						"register",
+						"nurse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register surgery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lbmRlcyIsImV4cCI6MTcxNjk5OTY0MX0.tbOm1pLlBFiWMqOCVLxXyN1LkwqBLb-xd-8FCgT16ks\",\r\n  \"patient_id\": 1,\r\n  \"doctor\": 10,\r\n  \"date\": \"2023-07-19T10:00:00\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/surgery",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"surgery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "surgery with hospitalization",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lbmRlcyIsImV4cCI6MTcxNjk5OTY0MX0.tbOm1pLlBFiWMqOCVLxXyN1LkwqBLb-xd-8FCgT16ks\",\r\n  \"patient_id\": 3,\r\n  \"doctor\": 10,\r\n  \"date\": \"2022-08-02T12:00:00\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/surgery/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"surgery",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create prescription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1iYXRpc3RhIiwiZXhwIjoxNzE3MDAwNDE2fQ.LNCXZ6P2nyufZkKvYQrEchpIr94leHSaYyi4GRglUtc\",\r\n    \"type\": \"hospitalization\",\r\n    \"event_id\": 2,\r\n    \"validity\": \"2046-06-01T10:00:00\",\r\n    \"medicines\": [\r\n        {\r\n            \"medicine\": \"Benuron\",\r\n            \"posology_dose\": 10,\r\n            \"posology_frequency\": \"8h-8h intercalado com brufen\"\r\n        },\r\n        {\r\n            \"medicine\": \"brufen\",\r\n            \"posology_dose\": 5,\r\n            \"posology_frequency\": \"8h-8h intercalado com benurun\"\r\n        }\r\n    ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/prescription",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"prescription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ver prescriptions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1iYXRpc3RhIiwiZXhwIjoxNzE3MDAwNDE2fQ.LNCXZ6P2nyufZkKvYQrEchpIr94leHSaYyi4GRglUtc\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/prescriptions/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"prescriptions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvbWFtb2RpIiwiZXhwIjoxNzE3MDAwOTYyfQ.7DDt5co4WpFVg9R0xv5l7rlkl3-hspbMRxn80OjXJxM\",\r\n    \"amount\": 700,\r\n    \"payment_method\": \"credit_card\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/bills/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"bills",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "top 3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lbmRlcyIsImV4cCI6MTcxNzAwMTEyOH0.AGPpdaNXYKqxvvgb5dCGDflMzFHnhLpSTclmidpf2r4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/top3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"top3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "daily summary",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lbmRlcyIsImV4cCI6MTcxNzAwMTEyOH0.AGPpdaNXYKqxvvgb5dCGDflMzFHnhLpSTclmidpf2r4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/daily/2023-07-17",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"daily",
+						"2023-07-17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "relatorio 12 meses",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lbmRlcyIsImV4cCI6MTcxNzAwMTEyOH0.AGPpdaNXYKqxvvgb5dCGDflMzFHnhLpSTclmidpf2r4\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080//dbproj/report",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"",
+						"dbproj",
+						"report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
